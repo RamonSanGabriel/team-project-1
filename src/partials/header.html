@@ -2,10 +2,8 @@
   <div class="container container-header-section">
     <nav class="header-nav">
       <a class="logo" href="./index.html">
-        <!-- <svg>
-          <use href="images/icons.svg#icon-logo"></use>
-        </svg> -->
-        <span class="logo">thewatchspot</span>
+        <img src="./images/logo.svg" alt="logo" width="14px" />
+        <span class="logo-name">thewatchspot</span>
       </a>
       <ul class="header-navmenu">
         <li class="header-navmenu-item">
@@ -20,30 +18,29 @@
       </ul>
     </nav>
     <address class="address">
-      <ul class="adress-detail-list">
-        <li class="address-detail-list-item">
-          <a class="adress-detail-list-item-link" href="tel:+380684439426"
-            >+380 (68) 443-94-26</a
-          >
-        </li>
-      </ul>
+      <a class="adress-tel" href="tel:+380684439426">+380 (68) 443-94-26</a>
     </address>
     <button
       class="button-navmenu js-open-menu"
       aria-expanded="false"
       aria-controls="mobile-nav"
     >
-      <!-- <svg class="icon-menu-burger" width="8" height="8">
-        <use href="./images/icons.svg#hamburger"></use>
-      </svg> -->
+      <svg class="icon-menu-burger" width="8" height="8">
+        <use href="./images/icons.svg#icon-gg_menu"></use>
+      </svg>
     </button>
     <div class="header-nav-mobile js-menu-container" id="mobile-nav">
-      <a class="logo" href="./index.html">
-        <!-- <svg>
-          <use href="images/icons.svg#icon-logo"></use>
-        </svg> -->
-        <span class="logo">thewatchspot</span>
-      </a>
+      <div class="container container-mobile-header">
+        <a class="logo" href="./index.html">
+          <img src="./images/logo.svg" alt="logo" width="14px" />
+          <span class="logo-name">thewatchspot</span>
+        </a>
+        <button class="button-navmenu-close-mobile js-close-menu">
+          <svg class="icon-navmenu-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+      </div>
       <ul class="header-navmenu-mobile">
         <li class="header-navmenu-item-mobile active">
           <a class="header-navmenu-item-link-mobile" href="#aboutus"
@@ -57,11 +54,6 @@
           <a class="header-navmenu-item-link-mobile" href="#sale">SALE</a>
         </li>
       </ul>
-      <button class="button-navmenu-close-mobile js-close-menu">
-        <!-- <svg class="icon-navmenu-close" width="8" height="8">
-          <use href="./images/icons.svg#close-black"></use>
-        </svg> -->
-      </button>
     </div>
   </div>
 </header>
