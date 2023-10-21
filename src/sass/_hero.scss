@@ -1,0 +1,146 @@
+.hero {
+    padding-top: 122px;
+    padding-bottom: 40px;
+    background-color: var(--black); 
+    @include respond-to(tablet){      
+      padding-top: 148px;
+      padding-bottom: 64px;
+    }   
+    &-container {
+      position: relative;
+    } 
+    &-content{      
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      @include respond-to(tablet){        
+        flex-wrap: nowrap
+      }
+
+      &-wrap {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include respond-to(desktop){
+          flex-direction: row;
+        }
+      }
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 38px;
+      line-height: calc(40/38);
+      letter-spacing: -2.4px;
+      color: var(--white);
+      margin-bottom: 60px;
+      @include respond-to(tablet){   
+        font-size: 60px;
+        line-height: calc(62/60);
+        letter-spacing: -2.4px;
+      }
+      @include respond-to(desktop){        
+        max-width: 750px;
+        margin-bottom: 42px;
+      }
+    }
+    
+    &-text {
+      max-width: 248px;
+      font-weight: 300;
+      line-height: calc(18/14);
+      letter-spacing: -0.28px;
+      color: var(--white);      
+      margin-left: 87px;      
+      padding-top: 0;
+      @include respond-to(tablet){
+        margin-left: 0;
+        padding-top: 57px;
+      }
+      @include respond-to(desktop){   
+        position: absolute;
+        max-width: 282px;
+        top: 0;
+        right: 20px;
+        padding-top: 0;
+      }
+    }
+
+    &-image {
+      margin-top: 40px;
+    }
+    &-btn {
+      position: absolute;
+      display: flex;
+      gap: 12px;
+      left: 2px;
+      bottom: 2px;
+      &-slider-next,
+      &-slider-prev {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          border: 1px solid var(--white);
+          border-radius: 8px;
+          background-color: transparent;
+          opacity: 0.5;
+          transition: opacity 250ms var(--action), scale 250ms var(--action);
+          @include respond-to(tablet){            
+            width: 40px;
+            height: 40px;
+          }
+      }
+      &-icon {
+        display: block;
+        stroke: var(--white);
+        opacity: 0.5;    
+        transition: opacity 250ms var(--action), scale 250ms var(--action);
+      }
+      &-slider-next:hover,
+      &-slider-prev:hover,
+      &-slider-next:hover &-icon,
+      &-slider-prev:hover &-icon,
+      &-slider-next:focus,
+      &-slider-prev:focus,
+      &-slider-next:focus &-icon,
+      &-slider-prev:focus &-icon {
+          opacity: 1;
+          scale: 1.05;
+      }
+    }
+}
+.swiper {
+  position: relative;
+  max-width: 266px;
+  padding-bottom: 55px;
+  margin-left: 0;
+  @include respond-to(tablet){    
+    max-width: 436px;
+    padding-bottom: 60px;    
+  }
+  @include respond-to(desktop){
+    padding-bottom: 60px;
+    margin-bottom: 0;
+  }
+  &-pagination-fraction {
+    width: 100px;
+    margin-left: auto;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    bottom: 5px;
+    color: var(--white);    
+    @include respond-to(desktop){    
+      bottom: 10px;
+    }
+  }  
+  &-swiper-pagination {
+    line-height: calc(18/14);
+    letter-spacing: -0.28px;    
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+  }  
+}
