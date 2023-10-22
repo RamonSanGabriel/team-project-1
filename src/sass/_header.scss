@@ -1,4 +1,7 @@
 /*Header*/
+.section .header-section {
+  background-color: var(--black);
+}
 .header-nav .header-navmenu {
   font-family: Epilogue, sans-serif;
   font-size: 9px;
@@ -28,7 +31,7 @@
   font-size: 9px;
   font-weight: 400;
   line-height: 12px;
-  margin-left: 567px;
+  margin-left: 44%;
   align-items: center;
   justify-content: center;
   background-color: var(--dark-green);
@@ -48,7 +51,30 @@
     display: none;
   }
   .button-navmenu {
-    margin-left: 140px;
+    margin-left: 35%;
+  }
+  .button-navmenu .icon-menu-burger {
+    height: 24px;
+    width: 24px;
+    stroke: var(--white);
+    fill: var(--white);
+    background-color: var(--black);
+    margin-bottom: -8px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    max-width: 1157px
+  }
+  .header-nav .header-navmenu {
+    display: none;
+  }
+  .address {
+    display: none;
+  }
+  .button-navmenu {
+    margin-left: 35%;
   }
   .button-navmenu .icon-menu-burger {
     height: 24px;
