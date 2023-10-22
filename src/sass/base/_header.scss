@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  :root {
+    --dark-green: #1e2827;
+    --black: #141414;
+    --white: #ffffff;
+    --main-background: #fbfbfb;
+    --transition-duration: 250ms;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Global Declaration */
+  
+  body {
+    background-color: var(--black);
+    color: var(--black);
+    font-family: Epilogue, sans-serif;
+    font-size: 14px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  address {
+    font-style: normal;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  button {
+    border: unset;
+    cursor: pointer;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  ul,
+  ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  figure {
+    margin: 0;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    padding: 0 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  
+  @media screen and (min-width: 1158px) {
+    .container {
+      max-width: 1158px;
+    }
+  }
+  input,
+  textarea {
+    outline: none;
+  }
+  
+  /*Header*/
+  .header-nav .header-navmenu {
+    font-family: Epilogue, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    color: var(--white);
+    letter-spacing: -0.45px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .logo {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding-top: 36px;
+    padding-right: 80px;
+  }
+  .address {
+    color: var(--white);
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-left: 567px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-green);
+    border-radius: 8px;
+    width: 149px;
+    height: 48px;
+  }
+  
+  @media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
+    .container {
+      max-width: 428px
+    }
+    .header-nav .header-navmenu {
+      display: none;
+    }
+    .address {
+      display: none;
+    }
+  }
+  /* Index Main Body */
+  
+  /* Hero Section */
+  
+  /* Feature Section */
+  
+  /* Our Team Section */
+  
+  /* Customer Section */
+  
+  /* Footer */
+  
+  /* Modal */
+  
