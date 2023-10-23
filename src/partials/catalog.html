@@ -152,6 +152,9 @@
         </li>
         <li class="catalog-list-item">
             <div class="catalog-list-item-card">
+                <svg class="catalog-list-item-card-icon">
+                    <use href="../src/images/icons.svg#icon-heart"></use>
+                </svg>
                 <figure class="catalog-list-item-card-display">
                     <img srcset="../src/images/catalog/watch5@1x.jpg 1x, ../src/images/catalog/watch5@2x.jpg 2x"
                         src="../src/images/catalog/watch5.jpg" 
@@ -189,6 +192,9 @@
         </li>
         <li class="catalog-list-item">
             <div class="catalog-list-item-card">
+                <svg class="catalog-list-item-card-icon">
+                    <use href="../src/images/icons.svg#icon-heart"></use>
+                </svg> 
                 <figure class="catalog-list-item-card-display">
                     <img srcset="../src/images/catalog/watch6@1x.jpg 1x, ../src/images/catalog/watch6@2x.jpg 2x"
                         src="../src/images/catalog/watch6.jpg" 
@@ -451,47 +457,49 @@
         <button class="catalog-button button" type="button" data-modal-open>BUY NOW</button>
     </div>
 </section>
-<div class="modal is-hidden" data-modal>
-    <div class="modal-container">
-        <button class="modal-close" type="button" data-modal-close>
-            <svg class="modal-close-icon">
-                <use href="../src/images/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-        <div class="modal-card">
-            <img 
-                srcset="../src/images/catalog/watch1@1x.jpg 1x, ../src/images/catalog/watch1@2x.jpg 2x"
-                src="../src/images/catalog/watch1.jpg" 
-                width="275" 
-                alt="watch" 
-                class="modal-card-image"
-            >
-            <div class="modal-card-text">
-                <h3 class="modal-card-description">Tube Watch S42 Date Steel With Black Case</h3>
-                <p class="modal-card-price">€395</p>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <div class="modal-container">
+            <button class="modal-close" type="button" data-modal-close>
+                <svg class="modal-close-icon">
+                    <use href="../src/images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="modal-card">
+                <img srcset="../src/images/catalog/watch1@1x.jpg 1x, ../src/images/catalog/watch1@2x.jpg 2x"
+                    src="../src/images/catalog/watch1.jpg" width="275" alt="watch" class="modal-card-image">
+                <div class="modal-card-text">
+                    <h3 class="modal-card-description">Tube Watch S42 Date Steel With Black Case</h3>
+                    <p class="modal-card-price">€395</p>
+                </div>
             </div>
+            <form class="modal-form">
+                <div class="modal-form-group" role="group">
+                    <label for="name" class="modal-form-label">
+                        <span class="modal-form-label-text">Full Name</span>
+                        <input type="name" class="modal-form-label-input" name="name" placeholder="Enter your full name"
+                            required>
+                    </label>
+                    <label for="email" class="modal-form-label">
+                        <span class="modal-form-label-text">Email</span>
+                        <input type="email" class="modal-form-label-input" name="email" placeholder="Enter your email"
+                            required>
+                    </label>
+                    <label for="cardnum" class="modal-form-label">
+                        <span class="modal-form-label-text">Card Number</span>
+                        <input type="number" class="modal-form-label-input" name="cardnum" placeholder="Enter card"
+                            required>
+                    </label>
+                    <label for="comment" class="modal-form-comment-label">
+                        <span class="modal-form-comment-label-text">Comments</span>
+                        <textarea type="text" class="modal-form-comment-label-textarea" name="comment"
+                            placeholder="Enter your text" required></textarea>
+                    </label>
+                </div>
+                <button class="modal-button button" type="submit">submit</button>
+                <p class="modal-terms">By clicking on “Submit” button, you agree to our Privacy Policy, and allow Promodo to
+                    use this information for marketing purposes.</p>
+            </form>
         </div>
-        <form class="modal-form">
-            <div class="modal-form-group" role="group">
-                <label for="name" class="modal-form-label">
-                    <span class="modal-form-label-text">Full Name</span>
-                    <input type="name" class="modal-form-label-input" name="name" placeholder="Enter your full name" required>
-                </label>
-                <label for="email" class="modal-form-label">
-                    <span class="modal-form-label-text">Email</span>
-                    <input type="email" class="modal-form-label-input" name="email" placeholder="Enter your email" required>
-                </label>
-                <label for="cardnum" class="modal-form-label">
-                    <span class="modal-form-label-text">Card Number</span>
-                    <input type="number" class="modal-form-label-input" name="cardnum" placeholder="Enter card" required>
-                </label>
-                <label for="comment" class="modal-form-comment-label">
-                    <span class="modal-form-comment-label-text">Comments</span>
-                    <textarea type="text" class="modal-form-comment-label-textarea" name="comment" placeholder="Enter your text" required></textarea>
-                </label>
-            </div>
-            <button class="modal-button button" type="submit">submit</button>
-            <p class="modal-terms">By clicking on “Submit” button, you agree to our Privacy Policy, and allow Promodo to use this information for marketing purposes.</p>
-        </form>
     </div>
 </div>

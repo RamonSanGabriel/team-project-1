@@ -5,7 +5,7 @@
     justify-content: center;
     width: min(calc(100% - 40px), 335px);
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0;
     gap: 40px;
     @include respond-to(tablet) {
         width: 704px;
@@ -41,11 +41,27 @@
         &-item{
             &-card {
                 display: flex;
+                position: relative;
                 flex-direction: column;
                 flex-wrap: wrap;
                 margin: 0;
                 gap: 14px;
                 width: min(100%, 335px);
+                &-icon {
+                    position: absolute;
+                    visibility: hidden;
+                    width: 24px;
+                    height: 24px;
+                    top: 14px;
+                    right: 14px;
+                    fill: rgba(0, 0, 0, 0.1);
+                    @include respond-to(tablet) {
+                        visibility: visible;
+                    }
+                    @include respond-to(desktop) {
+                        visibility: hidden;
+                    }
+                }
                 @include respond-to(desktop) {
                     width: 275px;
                 }
@@ -58,7 +74,9 @@
                 }
                 &-description {
                     color: var(--black, #141414);
+                    overflow: hidden;
                     text-overflow: ellipsis;
+                    white-space: nowrap;
                     font-size: 14px;
                     line-height: 18px;
                     letter-spacing: -0.28px;
@@ -71,9 +89,12 @@
                     letter-spacing: -0.24px;
                 }
                 &-image {
-                    padding: 43px 30px;
+                    margin: 43px 0;
+                    @include respond-to(tablet) {
+                        margin: 43px 30;
+                    }
                     @include respond-to(desktop) {
-                        padding: 26px 0;
+                        margin: 26px 0;
                     }
                 }
                 &-text {
@@ -93,23 +114,22 @@
                 left: 0;
                 background-color: rgba(20, 20, 20, 1);
                 transform: translateY(100%);
-                transition: transform 250ms;
+                transition: transform var(--action) var(--cubic);
                 @include respond-to(desktop) {
                     width: 275px;
                 }
             }
         }
     }
-
     &-overlay {
         &-text {
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 40px;
+            padding: 30px;
             gap: 20px;
             @include respond-to(desktop) {
-                padding: 20px;
+                padding: 15px;
             }
             &-content {
                 display: flex;
@@ -166,18 +186,38 @@
     }
 }
 
-
 .catalog-list-item-card:hover .catalog-list-item-overlay,
 .catalog-list-item-card:focus .catalog-list-item-overlay {
     transform: translateY(0);
 }
 
-.modal {
+.catalog-list-item-card-icon:hover,
+.catalog-list-item-card-icon:focus {
+    fill: var(--black, #141414);
+}
+
+.backdrop{
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 69;
+    opacity: 1;
+    transition: opacity var(--action) var(--cubic);
+}
+
+.modal {
+    width: (100%, 335px);
+    @include respond-to(tablet) {
+        width: (100%, 744px);
+    }
+    @include respond-to(desktop) {
+        width: (100%, 904px);
+    }
     &-container{
         display: flex;
         position: relative;
@@ -224,11 +264,19 @@
         gap: 14px;
         &-image {
             padding: 26px 0;
+            margin-left: auto;
+            margin-right: auto;
         }
         &-text {
             display: flex;
             flex-direction: column;
             gap: 4px;
+        }
+        &-description{
+            width: 275px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
     &-form {
@@ -304,10 +352,3 @@
     visibility: hidden;
     opacity: 0;
 }
-
-
-
-
-
-
-
