@@ -39,14 +39,27 @@
             row-gap: 64px;
         }
         &-item{
+            perspective: 1000px;
+            position: relative;
+            width: min(100%, 335px);
+            height: 410px;
+            @include respond-to(desktop) {
+                width: 275px;
+                height: 375px;
+            }
             &-card {
                 display: flex;
-                position: relative;
                 flex-direction: column;
                 flex-wrap: wrap;
                 margin: 0;
                 gap: 14px;
                 width: min(100%, 335px);
+                height: 410px;
+                transform-style: preserve-3d;
+                transition: transform var(--action) var(--cubic);
+                @include respond-to(desktop) {
+                    height: 375px;
+                }
                 &-icon {
                     position: absolute;
                     visibility: hidden;
@@ -66,11 +79,14 @@
                     width: 275px;
                 }
                 &-display {
-                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
                     width: 100%;
                     margin: 0 auto;
-                    position: relative;
-                    overflow: hidden;
+                    position: absolute;
+                    backface-visibility: hidden;
                 }
                 &-description {
                     color: var(--black, #141414);
@@ -91,7 +107,7 @@
                 &-image {
                     margin: 43px 0;
                     @include respond-to(tablet) {
-                        margin: 43px 30;
+                        margin: 43px 30px;
                     }
                     @include respond-to(desktop) {
                         margin: 26px 0;
@@ -106,22 +122,19 @@
                     }
                 }
             }
-            &-overlay {
-                width: (100%, 335px);
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: rgba(20, 20, 20, 1);
-                transform: translateY(100%);
-                transition: transform var(--action) var(--cubic);
-                @include respond-to(desktop) {
-                    width: 275px;
-                }
-            }
         }
     }
-    &-overlay {
+    &-back {
+        width: min(100%, 335px);
+        height: 100%;
+        background-color: var(--dark-green);
+        position: absolute;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        @include respond-to(desktop) {
+            width: 275px;
+            height: 375px;
+        }
         &-text {
             height: 100%;
             display: flex;
@@ -146,6 +159,7 @@
             }
             &-description {
                 color: rgba(255, 255, 255, 0.50);
+                margin: 0;
                 font-size: 14px;
                 line-height: 18px;
                 letter-spacing: -0.14px;
@@ -172,23 +186,25 @@
         &-holder {
             display: flex;
             justify-content: flex-end;
+            @include respond-to(tablet) {
+                margin-top: -250px;
+            }
             @include respond-to(desktop) {
                 margin-top: 40px;
             }
         }
     }
 }
-
 .extra-set {
     display: none;
     @include respond-to(desktop) {
         display: flex;
+        gap: 24px;
     }
 }
 
-.catalog-list-item-card:hover .catalog-list-item-overlay,
-.catalog-list-item-card:focus .catalog-list-item-overlay {
-    transform: translateY(0);
+.catalog-list-item:hover .catalog-list-item-card {
+    transform: rotateY(180deg);
 }
 
 .catalog-list-item-card-icon:hover,
@@ -345,6 +361,15 @@
         align-items: flex-start;
         margin: 18px 0 10px;
         gap: 10px;
+    }
+}
+
+.holder {
+    @include respond-to(tablet) {
+         margin-top: -240px;
+    }
+    @include respond-to(desktop) {
+         margin-top: 0px;
     }
 }
 
