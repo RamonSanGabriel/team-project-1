@@ -1,23 +1,23 @@
-.logo {
+.logo-mobile {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     column-gap: 4px;
 }
 
-.logo img {
+.logo-mobile img {
     width: 14px;
     height: 14px;
 }
 
 @media screen and (min-width: 768px) {
-    .logo img {
+    .logo-mobile img {
         width: 19px;
         height: 19px;
     }
 }
 
-.logo-name {
+.logo-name-mobile {
     color: var(--white);
     font-family: Epilogue;
     font-size: 12px;
@@ -28,27 +28,11 @@
 }
 
 @media screen and (min-width: 768px) {
-    .logo-name {
+    .logo-name-mobile {
         font-size: 15px;
         letter-spacing: -0.45px;
     }
 }
-.button-navmenu {
-    background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-    .button-navmenu {
-        display: none;
-    }
-}
-
-.icon-menu-burger {
-    width: 24px;
-    height: 24px;
-    fill: var(--white);
-}
-
 .header-nav-mobile {
     background-color: var(--dark-green);
     position: fixed;
@@ -95,11 +79,13 @@
     cursor: pointer;
 }
 
-.icon-navmenu-close {
+.icon-navmenu-close-mobile {
     fill: var(--white);
     stroke: var(--white);
     width: 24px;
     height: 24px;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-navmenu-mobile {
