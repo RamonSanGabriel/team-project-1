@@ -25,6 +25,8 @@
 .sale-section-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
 
     @include respond-to(tablet){     
@@ -33,15 +35,16 @@
 
     @include respond-to(desktop){      
         flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 100%;
+        gap: unset;
     }
 }
 
 .sale-gallery-block {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
     width: 100%;
 
@@ -98,7 +101,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 40px;
 
@@ -107,8 +110,9 @@
     }
     
     @include respond-to(desktop) {
-        width: 100%;
-        display: block;
+        width: 596px;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }
 
@@ -200,7 +204,7 @@
     }
     
     @include respond-to(desktop) {
-        width: 572px;
+        width: 369px;
     }
 }
 
@@ -218,7 +222,7 @@
     }
 
     @include respond-to(desktop) {
-        margin-left: 450px;
+        margin-left: 249px;
     }
 }
 
@@ -236,7 +240,7 @@
     }
 
     @include respond-to(desktop) {
-        margin-left: 395px;
+        margin-left: 193px;
     }
 }
 
