@@ -1,5 +1,5 @@
 /*Header*/
-.section .header-section {
+.section, .header-section {
   background-color: var(--black);
 }
 .container-header-section {
@@ -7,7 +7,7 @@
   padding: 20px 0;
   justify-content: space-between;
 }
-.header-nav .header-navmenu {
+.header-nav, .header-navmenu {
   font-family: Epilogue, sans-serif;
   font-size: 9px;
   font-weight: 400;
@@ -21,17 +21,16 @@
   gap: 40px;
 }
 .logo {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: var(--white);
-  padding-top: 36px;
   padding-right: 80px;
 }
 .address {
   color: var(--white);
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   font-size: 9px;
   font-weight: 400;
