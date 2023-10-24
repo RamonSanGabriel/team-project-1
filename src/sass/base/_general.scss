@@ -1,11 +1,12 @@
 :root {
-  --dark-green: #1e2827;
-  --black: #141414;
-  --white: #ffffff;
-  --main-background: #fbfbfb;
+    --dark-green: #1E2827;
+    --black: #141414;
+    --white: #FFFFFF;
+    --grey: rgba(20, 20, 20, 0.50);
+    --main-background: #FBFBFB;
+    --cubic: cubic-bezier(.4, 0, .2, 1);
+    --action: 250ms;
   --gray: #c6cdd1;
-  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --action: 250ms;
 }
 
 html {
