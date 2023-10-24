@@ -2,6 +2,11 @@
 .section .header-section {
   background-color: var(--black);
 }
+.container-header-section {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+}
 .header-nav .header-navmenu {
   font-family: Epilogue, sans-serif;
   font-size: 9px;
@@ -9,7 +14,7 @@
   line-height: 12px;
   color: var(--white);
   letter-spacing: -0.45px;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
