@@ -68,7 +68,6 @@
 
 }
 
-
 .accordion {
     width: 100%;
     color: black;
@@ -173,6 +172,10 @@
     transition: 0.5s;
 
     @include respond-to(tablet) {
+        width: 100%;
+    }
+
+    @include respond-to(desktop) {
         width: 369px;
     }
 }
