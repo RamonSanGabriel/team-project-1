@@ -172,7 +172,11 @@
     transition: 0.5s;
 
     @include respond-to(tablet) {
-        width: 369px;
+        width: 100%;
+    }
+
+    @include respond-to(desktop) {
+        width: 100%;
     }
 }
 
