@@ -108,6 +108,7 @@
                     font-size: 12px;
                     line-height: 14px;
                     letter-spacing: -0.24px;
+                    margin: 0;
                 }
                 &-image {
                     margin: 43px 0;
@@ -234,15 +235,15 @@
 }
 
 .modal {
-    width: (100%, 335px);
+    width: 335px;
     border-radius: 8px;
     background: var(--white, #FFF);
     box-shadow: 0px 0px 8.77546px 0px rgba(0, 0, 0, 0.01), 0px 0px 18.17037px 0px rgba(0, 0, 0, 0.02), 0px 0px 36.2375px 0px rgba(0, 0, 0, 0.03), 0px 0px 71.02963px 0px rgba(0, 0, 0, 0.03), 0px 0px 130.59953px 0px rgba(0, 0, 0, 0.04), 0px 0px 223px 0px rgba(0, 0, 0, 0.05);
     @include respond-to(tablet) {
-        width: (100%, 744px);
+        width:  744px;
     }
     @include respond-to(desktop) {
-        width: (100%, 904px);
+        width: 904px;
     }
     &-container{
         display: flex;
@@ -301,6 +302,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+        }
+        &-price{
+            margin: 0;
         }
     }
     &-form {

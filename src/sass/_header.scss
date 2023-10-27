@@ -93,6 +93,7 @@
 
 .address {
   display: none;
+  transition: width var(--action) var(--cubic);
 }
 .address:hover {
   border-color: var(--white);
