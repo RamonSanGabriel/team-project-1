@@ -223,6 +223,7 @@
 .backdrop{
     position: fixed;
     display: flex;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -236,6 +237,8 @@
 
 .modal {
     width: 335px;
+    width: min(100%, 335px);
+    height: 100%;
     border-radius: 8px;
     background: var(--white, #FFF);
     box-shadow: 0px 0px 8.77546px 0px rgba(0, 0, 0, 0.01), 0px 0px 18.17037px 0px rgba(0, 0, 0, 0.02), 0px 0px 36.2375px 0px rgba(0, 0, 0, 0.03), 0px 0px 71.02963px 0px rgba(0, 0, 0, 0.03), 0px 0px 130.59953px 0px rgba(0, 0, 0, 0.04), 0px 0px 223px 0px rgba(0, 0, 0, 0.05);
@@ -244,6 +247,12 @@
     }
     @include respond-to(desktop) {
         width: 904px;
+        width: min(100%, 744px);
+        height: min(100%, 670px);
+    }
+    @include respond-to(desktop) {
+        width: min(100%, 904px);
+        height: min(100%, 694px);
     }
     &-container{
         display: flex;
@@ -251,8 +260,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-radius: 8px;
+        background: var(--white, #FFF);
         gap: 40px;
-        padding: 40px 20px;
+        padding: 40px;
         @include respond-to(tablet) {
             flex-direction: row;
             align-items: flex-start;
@@ -268,6 +279,9 @@
         border-radius: 50%;
         border: unset;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
         top: 12px;
         right: 12px;
@@ -278,9 +292,6 @@
         &-icon {
             width: 24px;
             height: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
     }
     &-card {
@@ -302,6 +313,17 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.28px;
+        }
+        &-price {
+            color: rgba(20, 20, 20, 0.50);
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.24px;
+            margin: 0;
         }
         &-price{
             margin: 0;
@@ -310,10 +332,19 @@
     &-form {
         display: flex;
         flex-direction: column;
+        @include respond-to(tablet) {
+            width: 368px;
+        }
+        @include respond-to(desktop) {
+            width: 508px;
+        }
         &-group {
             display: flex;
             flex-direction: column;
             gap: 18px;
+            @include respond-to(desktop) {
+                    gap: 24px;
+            }
         }
         &-label,
         &-comment-label {
@@ -321,9 +352,6 @@
             flex-direction: column;
             gap: 12px;
             width: 100%;
-            @include respond-to(desktop) {
-                gap: 24px;
-            }
         }
         &-label-text,
         &-comment-label-text {
@@ -345,7 +373,6 @@
                 outline: none;
                 &::placeholder {
                     color: rgba(20, 20, 20, 0.50);
-                    
                     font-size: 14px;
                     line-height: 18px;
                     letter-spacing: -0.28px;
@@ -361,6 +388,7 @@
             gap: 8px;
             border-radius: 8px;
             border: 1px solid rgba(20, 20, 20, 0.50);
+            resize: none;
             outline: none;
         }
     }
@@ -373,6 +401,13 @@
         align-items: flex-start;
         margin: 18px 0 10px;
         gap: 10px;
+    }
+    &-terms {
+        color: rgba(20, 20, 20, 0.40);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.24px;
     }
 }
 
