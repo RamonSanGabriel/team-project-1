@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var menuLinks = document.querySelectorAll('.header-navmenu-item-link');
+    var menuLinks = document.querySelectorAll('.link');
 
     menuLinks.forEach(function(link) {
         link.addEventListener('click', function(event) {
