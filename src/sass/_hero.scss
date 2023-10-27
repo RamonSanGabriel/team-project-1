@@ -3,8 +3,11 @@
     padding-bottom: 40px;
     background-color: var(--black); 
     @include respond-to(tablet){      
-      padding-top: 148px;
-      padding-bottom: 64px;
+      padding-top: 80px;
+      padding-bottom:64px;
+    }   
+    @include respond-to(desktop){
+      padding-bottom:80px;
     }   
     &-container {
       position: relative;
@@ -60,7 +63,7 @@
       @include respond-to(desktop){   
         position: absolute;
         max-width: 282px;
-        top: 0;
+        top: -15px;
         right: 20px;
         padding-top: 0;
       }
@@ -68,6 +71,9 @@
 
     &-image {
       margin-top: 40px;
+      @include respond-to(desktop){  
+        margin-top: 0px;
+      }
     }
     &-btn {
       position: absolute;
@@ -121,7 +127,6 @@
     padding-bottom: 60px;    
   }
   @include respond-to(desktop){
-    padding-bottom: 60px;
     margin-bottom: 0;
   }
   &-pagination-fraction {
@@ -133,7 +138,7 @@
     bottom: 5px;
     color: var(--white);    
     @include respond-to(desktop){    
-      bottom: 10px;
+      bottom: 1px;
     }
   }  
   &-swiper-pagination {

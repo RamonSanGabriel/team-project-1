@@ -153,13 +153,20 @@
   color: var(--white);
   padding: 8px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);  
+  transition: all var(--action);
 }
 
-.social-media-item > .link {
+.social-media-item:hover {
+  border-color: var(--white);
+}
+
+.social-media-item > .social-media-link {
   display: block;
   line-height: 0px;
 }
+
+
 
 .icon {
   width: 24px;

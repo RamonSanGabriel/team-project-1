@@ -10,6 +10,7 @@
 
     @include respond-to(desktop) {
         width: 100%;
+        gap: 80px;
     }
 
     &-title {
