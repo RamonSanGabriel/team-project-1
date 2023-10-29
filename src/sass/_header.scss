@@ -1,12 +1,24 @@
 
 .header-section {
   background-color: var(--black);
-  padding-top: 29px;
+  padding-top: 29px;  
+  transition: all .10s;
 }
 @media screen and (min-width: 1158px) {
   .header-section {
     padding: 20px 0;
   }
+}
+.scrolled{
+  padding-top: 90px;
+}
+.scrolled #header {
+  z-index: 9999;
+  background-color: var(--black);
+  transition: all var(--action);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .container-header-section {
   display: flex;
