@@ -71,7 +71,7 @@
 
 .accordion {
     width: 100%;
-    color: black;
+    color: var(--black);
 
     @include respond-to(tablet) {
         width: 100%;
@@ -145,13 +145,31 @@
     position: relative;
     padding: 10px 0;
     font-size: 18px;
-    color: black;
+    color: var(--black);
     cursor: pointer;
 }
 
 .accordion .label::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: auto;
+    top: -1px;
+
+    // content: "";
+    // width: 100%;
+    // height: 1px;
+    // background: var(--black);npm 
+    // position: absolute;
+    // left: auto;
+    // top: -1px;
+}
+
+.accordion .label::after {
     content: '+';
-    color: black;
+    color: var(--black);
     position: absolute;
     top: 50%;
     right: -2px;
@@ -181,12 +199,6 @@
     }
 }
 
-.accordion hr {
-    width: 100%;
-    margin-left: 0;
-    border: 1px solid grey;
-}
-
 .accordion .container.active .content {
     height: 165px;
 }
@@ -195,7 +207,7 @@
     height: 146px;
 }
 
-.accordion .container.active .label::before {
+.accordion .container.active .label::after {
     content: '-';
     font-size: 30px;
 }
