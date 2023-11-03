@@ -3,5 +3,5 @@ function myFunction(imgs) {
   var imgText = document.getElementById("imgtext");
   expandImg.src = imgs.src;
   imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
+  expandImg.parentElement.style.display = "inline-block";
 }
