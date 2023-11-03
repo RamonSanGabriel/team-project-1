@@ -37,8 +37,6 @@
         margin-top: 0;
       &.first {
         margin-bottom: 20px;
-      &.first {
-        margin-bottom: 20px;
         @include respond-to(tablet) {
           width: 220px;
           margin-right: 20px;
@@ -51,8 +49,6 @@
       }
       &.second {
         margin-bottom: 40px;
-      &.second {
-        margin-bottom: 40px;
         @include respond-to(tablet) {
           width: 250px;
           margin-bottom: 0;
@@ -62,9 +58,6 @@
         }
       }
     }
-    &-gif {
-      width: 100%;
-      height: auto;
     &-gif {
       width: 100%;
       height: auto;
