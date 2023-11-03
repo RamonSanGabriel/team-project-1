@@ -108,12 +108,11 @@
 
 
 @media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
-  .container {
-//    max-width: 428px : bad practice - dont't modify global css and used .container-header-section instead
-  }
+
   .header-nav .header-navmenu {
     display: none;
   }
+}
 /* Header Address */
 
 .address {
@@ -143,15 +142,16 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .container {
-//     max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
-  }
+  // .container {
+  //   max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
+  // }
   .header-nav .header-navmenu {
     display: none;
   }
   .address {
     display: none;
   }
+}
 /* Mobile Nav Menu */
 
 .button-navmenu {
@@ -167,4 +167,5 @@
   width: 24px;
   height: 24px;
   fill: var(--white);
+}
 }
