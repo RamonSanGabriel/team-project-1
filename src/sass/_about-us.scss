@@ -63,7 +63,7 @@
     // }
     &-gif {
       width: 100%;
-      height: auto;
+      height: auto; 
       @include respond-to(desktop) {
         width: 892px;
         margin-left: auto;
