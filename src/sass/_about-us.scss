@@ -1,32 +1,59 @@
 .about-us {
-    &-container {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      @include respond-to(tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 40px;
-      }
-      @include respond-to(desktop) {
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
+  &-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include respond-to(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 40px;
     }
-    &-title {
-      font-weight: 600;
-      font-size: 32px;
-      line-height: calc(40/32);
-      letter-spacing: -.02em;
-      color: var(--dark-green);
-      margin-bottom: 40px;
+    @include respond-to(desktop) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: calc(40 / 32);
+    letter-spacing: -0.02em;
+    color: var(--dark-green);
+    margin-bottom: 40px;
+    @include respond-to(tablet) {
+      font-size: 40px;
+      line-height: calc(44 / 40);
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+    @include respond-to(desktop) {
+      margin-right: 110px;
+    }
+  }
+  &-description {
+    font-weight: 300;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.28px;
+    margin-top: 0;
+    &.first {
+      margin-bottom: 20px;
       @include respond-to(tablet) {
-        font-size: 40px;
-        line-height: calc(44/40);
-        margin-right: 40px;
+        width: 220px;
+        margin-right: 20px;
         margin-bottom: 0;
       }
       @include respond-to(desktop) {
-        margin-right: 110px;        
+        width: 439px;
+        margin-right: 40px;
+      }
+    }
+    &.second {
+      margin-bottom: 40px;
+      @include respond-to(tablet) {
+        width: 250px;
+        margin-bottom: 0;
+      }
+      @include respond-to(desktop) {
+        width: 380px;
       }
     }
     &-description {
@@ -66,3 +93,4 @@
       }
     }
   }
+}
