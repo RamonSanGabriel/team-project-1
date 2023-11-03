@@ -1,11 +1,12 @@
 
 /*Header*/
-.header-section {
-  background-color: var(--black); 
+// .header-section {
+//   background-color: var(--black); 
 
 .header-section {
   background-color: var(--black);
-  padding-top: 29px;  
+  padding-top: 29px;
+  padding-bottom: 29px;  
   transition: all .10s;
 }
 @media screen and (min-width: 1158px) {
@@ -106,12 +107,12 @@
 }
 
 
-@media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
+// @media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
 
-  .header-nav .header-navmenu {
-    display: none;
-  }
-}
+//   .header-nav .header-navmenu {
+//     display: none;
+//   }
+// }
 /* Header Address */
 
 .address {
@@ -140,17 +141,17 @@
     cursor: pointer;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-  // .container {
-  //   max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
-  // }
-  .header-nav .header-navmenu {
-    display: none;
-  }
-  .address {
-    display: none;
-  }
-}
+// @media only screen and (min-width: 768px) and (max-width: 1157px) {
+//   // .container {
+//   //   max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
+//   // }
+//   .header-nav .header-navmenu {
+//     display: none;
+//   }
+//   .address {
+//     display: none;
+//   }
+// }
 /* Mobile Nav Menu */
 
 .button-navmenu {
@@ -167,4 +168,4 @@
   height: 24px;
   fill: var(--white);
 }
-}
+// }
