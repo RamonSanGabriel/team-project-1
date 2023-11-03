@@ -5,35 +5,39 @@
     padding: 40px 20px 80px 20px;
 
     @include respond-to(tablet) {
-            padding: 80px 32px 128px 32px;
-        }
-    
-        @include respond-to(desktop) {
-            width: 100%;
-        }
-}
-
-.sale-section-title {
-    color: var(--dark-green);
-    font-family: inherit;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.1em;
-    letter-spacing: -0.8px;
-}
-
-.sale-section-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-    @include respond-to(tablet){     
-        padding: 0 66px;
+        padding: 80px 32px 128px 32px;
     }
 
-    @include respond-to(desktop){      
-        flex-direction: row;
+    @include respond-to(desktop) {
         width: 100%;
+        gap: 80px;
+    }
+
+    &-title {
+        color: var(--dark-green);
+        font-family: inherit;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.1em;
+        letter-spacing: -0.8px;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+
+        @include respond-to(tablet) {
+            padding: 0 66px;
+        }
+
+        @include respond-to(desktop) {
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0 96px;
+        }
     }
 }
 
@@ -46,76 +50,32 @@
     width: 100%;
 
     @include respond-to(tablet) {
-        width: 100%;
-    }
-    
-    @include respond-to(desktop) {
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
+
+    @include respond-to(desktop) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
 }
 
-.sale-gallery-sub-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.sale-sm-img img {
+.accordion {
     width: 100%;
-    height: 100%;
+    color: black;
 
     @include respond-to(tablet) {
         width: 100%;
-        height: 100%;
-    }
-
-    @include respond-to(desktop) {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.sale-lg-img img {
-    width: 100%;
-    height: 100%;
-    
-    @include respond-to(tablet) {
-        width: 100%;
-        height: 100%;
-    }
-
-    @include respond-to(desktop) {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.sale-description-block {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-    @include respond-to(tablet) {
-        width: 100%;
-    }
-    
-    @include respond-to(desktop) {
-        width: 100%;
-        display: block;
-    }
-}
-
-.sale-description-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    }  
 }
 
 .product-name {
@@ -127,11 +87,12 @@
     letter-spacing: -0.76px;
 
     @include respond-to(tablet) {
-            font-size: 38px;
-        }
+        font-size: 38px;
+    }
+
     @include respond-to(desktop) {
-            font-size: 38px;
-        }
+        font-size: 38px;
+    }
 }
 
 .product-tag {
@@ -150,6 +111,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
+    margin-bottom: 40px;
 }
 
 .sale-price {
@@ -159,7 +121,7 @@
     font-weight: 400;
     line-height: 1.33em;
     letter-spacing: -0.36px;
-    margin: unset;
+    margin: 0;
 }
 
 .original-price {
@@ -167,84 +129,84 @@
     font-family: inherit;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16em;
-    letter-spacing: -0.24px;
     text-decoration-line: line-through;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: unset;
+    margin: 0;
 }
 
-.descr-subheading {
-    font-family: inherit;
+.accordion .container {
+    position: relative;
+    padding: 0;
+}
+
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
     font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.accordion .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+.accordion .content {
+    position: relative;
+    color: var(--grey);
     font-weight: 400;
-    line-height: 1.33em;
-    letter-spacing: -0.36px;
-    text-transform: uppercase;
-}
-
-.descr-subheading::before {
-    content: "";
-    background-color: var(--black);
-    position: absolute;
+    line-height: 1.28em;
+    letter-spacing: -0.14px;
+    height: 0;
+    font-size: 14px;
+    text-align: left;
     width: 335px;
-    height: 1px;
-    display: block;
-    margin-top:-10px;
-    margin-left: 0px;
-    
-    @include respond-to(tablet) {
-        width: 572px;
-    }
-    
-    @include respond-to(desktop) {
-        width: 572px;
-    }
-}
-
-.sale-descr-sub-block .line::after {
-    content: "";
-    background-color: var(--black);
-    position: absolute;
-    width: 16px;
-    height: 1px;
-    margin-top: 10px;
-    margin-left: 215px;
+    overflow: hidden;
+    transition: 0.5s;
 
     @include respond-to(tablet) {
-        margin-left: 450px;
+        width: 100%;
     }
 
     @include respond-to(desktop) {
-        margin-left: 450px;
+        width: 369px;
     }
 }
 
-.descr-subheading::after {
-    content: "";
-    background-color: var(--black);
-    position: absolute;
-    width: 16px;
-    height: 1px;
-    margin-top: 10px;
-    margin-left: 160px;
-    
-    @include respond-to(tablet) {
-        margin-left: 395px;
-    }
-
-    @include respond-to(desktop) {
-        margin-left: 395px;
-    }
+.accordion hr {
+    width: 100%;
+    margin-left: 0;
+    border: 1px solid grey;
 }
 
-.product-description {
+.accordion .container.active .content {
+    height: 165px;
+}
+
+.accordion .container.active .description {
+    height: 146px;
+}
+
+.accordion .container.active .label::before {
+    content: '-';
+    font-size: 30px;
+}
+
+.details-and-features-list {
     color: var(--grey);
     font-family: inherit;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.28em;
     letter-spacing: -0.14px;
+    list-style: none;
+    padding: 0;
 }

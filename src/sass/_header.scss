@@ -1,75 +1,150 @@
+
 /*Header*/
 .header-section {
   background-color: var(--black); 
+
+.header-section {
+  background-color: var(--black);
+  padding-top: 29px;  
+  transition: all .10s;
+}
+@media screen and (min-width: 1158px) {
+  .header-section {
+    padding: 20px 0;
+  }
+}
+.scrolled{
+  padding-top: 90px;
+}
+.scrolled #header {
+  z-index: 9999;
+  background-color: var(--black);
+  transition: all var(--action);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
 }
 .container-header-section {
   display: flex;
-  padding: 20px 0;
   justify-content: space-between;
-}
-.header-nav, .header-navmenu {
-  font-family: Epilogue, sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  line-height: 12px;
-  color: var(--white);
-  letter-spacing: -0.45px;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
 }
+@media screen and (min-width: 768px) {
+  .container-header-section {
+    padding: 0 32px;
+  }
+}
+
+/* Header Nav */
+
+.header-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-nav {
+    column-gap: 80px;
+  }
+}
+
+/* Logo */
+
 .logo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: var(--white);
-  padding-right: 80px;
+  column-gap: 4px;
 }
-.address {
+.logo img {
+  width: 14px;
+  height: 14px;
+}
+@media screen and (min-width: 768px) {
+  .logo img {
+    width: 19px;
+    height: 19px;
+  }
+}
+.logo-name {
   color: var(--white);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 9px;
+  font-family: Epilogue;
+  font-size: 12px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 12px;
-  margin-left: 44%;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--dark-green);
-  border-radius: 8px;
-  width: 149px;
-  height: 48px;
+  line-height: normal;
+  letter-spacing: -0.36px;
 }
+@media screen and (min-width: 768px) {
+  .logo-name {
+    font-size: 15px;
+    letter-spacing: -0.45px;
+  }
+}
+
+/* Header Nav Menu */
+
+.header-navmenu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-navmenu {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+  }
+}
+.header-navmenu-item {
+  color: var(--white);
+  text-align: center;
+  font-family: Epilogue;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.33em;
+  text-transform: uppercase;
+}
+
 
 @media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
   .container {
-   // max-width: 428px : bad practice - dont't modify global css and used .container-header-section instead
+//    max-width: 428px : bad practice - dont't modify global css and used .container-header-section instead
   }
   .header-nav .header-navmenu {
     display: none;
   }
+/* Header Address */
+
+.address {
+  display: none;
+  transition: width var(--action) var(--cubic);
+}
+.address:hover {
+  border-color: var(--white);
+}
+@media screen and (min-width: 768px) {
   .address {
-    display: none;
-  }
-  .button-navmenu {
-    margin-left: 35%;
-  }
-  .button-navmenu .icon-menu-burger {
-    height: 24px;
-    width: 24px;
-    stroke: var(--white);
-    fill: var(--white);
-    background-color: var(--black);
-    margin-bottom: -8px;
+    display: flex;
+    padding: 18px 36px;
+    border-radius: 8px;
+    border: 1px solid var(--dark-green);
+    background: var(--dark-green);
+
+    color: var(--white);
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33em;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .container {
-    //max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
+//     max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
   }
   .header-nav .header-navmenu {
     display: none;
@@ -77,15 +152,19 @@
   .address {
     display: none;
   }
+/* Mobile Nav Menu */
+
+.button-navmenu {
+  background-color: transparent;
+  border: 1px solid var(--black);
+}
+@media screen and (min-width: 768px) {
   .button-navmenu {
-    margin-left: 35%;
+    display: none;
   }
-  .button-navmenu .icon-menu-burger {
-    height: 24px;
-    width: 24px;
-    stroke: var(--white);
-    fill: var(--white);
-    background-color: var(--black);
-    margin-bottom: -8px;
-  }
+}
+.icon-menu-burger {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
 }

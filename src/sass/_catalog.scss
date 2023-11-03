@@ -39,13 +39,15 @@
             row-gap: 64px;
         }
         &-item{
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
             perspective: 1000px;
             position: relative;
             width: min(100%, 335px);
-            height: 410px;
+            height: 100%;
             @include respond-to(desktop) {
                 width: 275px;
-                height: 375px;
             }
             &-card {
                 display: flex;
@@ -54,11 +56,11 @@
                 margin: 0;
                 gap: 14px;
                 width: min(100%, 335px);
-                height: 410px;
+                height: 360px;
                 transform-style: preserve-3d;
                 transition: transform var(--action) var(--cubic);
                 @include respond-to(desktop) {
-                    height: 375px;
+                    height: 325px;
                 }
                 &-icon {
                     position: absolute;
@@ -82,11 +84,14 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    height: 100%;
+                    height: 360px;
                     width: 100%;
                     margin: 0 auto;
                     position: absolute;
                     backface-visibility: hidden;
+                    @include respond-to(desktop) {
+                        height: 325px;
+                    }
                 }
                 &-description {
                     color: var(--black, #141414);
@@ -103,6 +108,7 @@
                     font-size: 12px;
                     line-height: 14px;
                     letter-spacing: -0.24px;
+                    margin: 0;
                 }
                 &-image {
                     margin: 43px 0;
@@ -126,23 +132,25 @@
     }
     &-back {
         width: min(100%, 335px);
-        height: 100%;
+        height: 360px;
         background-color: var(--dark-green);
+        border-radius: 8px;
+        background: var(--dark-green, #1E2827);
         position: absolute;
         backface-visibility: hidden;
         transform: rotateY(180deg);
         @include respond-to(desktop) {
             width: 275px;
-            height: 375px;
+            height: 325px;
         }
         &-text {
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 30px;
+            padding: 40px;
             gap: 20px;
             @include respond-to(desktop) {
-                padding: 15px;
+                padding: 20px;
             }
             &-content {
                 display: flex;
@@ -187,7 +195,7 @@
             display: flex;
             justify-content: flex-end;
             @include respond-to(tablet) {
-                margin-top: -250px;
+                margin-top: -24px;
             }
             @include respond-to(desktop) {
                 margin-top: 40px;
@@ -215,6 +223,7 @@
 .backdrop{
     position: fixed;
     display: flex;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -227,12 +236,23 @@
 }
 
 .modal {
-    width: (100%, 335px);
+    width: 335px;
+    width: min(100%, 335px);
+    height: 100%;
+    border-radius: 8px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 8.77546px 0px rgba(0, 0, 0, 0.01), 0px 0px 18.17037px 0px rgba(0, 0, 0, 0.02), 0px 0px 36.2375px 0px rgba(0, 0, 0, 0.03), 0px 0px 71.02963px 0px rgba(0, 0, 0, 0.03), 0px 0px 130.59953px 0px rgba(0, 0, 0, 0.04), 0px 0px 223px 0px rgba(0, 0, 0, 0.05);
     @include respond-to(tablet) {
-        width: (100%, 744px);
+        width:  744px;
     }
     @include respond-to(desktop) {
-        width: (100%, 904px);
+        width: 904px;
+        width: min(100%, 744px);
+        height: min(100%, 670px);
+    }
+    @include respond-to(desktop) {
+        width: min(100%, 904px);
+        height: min(100%, 694px);
     }
     &-container{
         display: flex;
@@ -240,10 +260,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
-        padding: 40px 20px;
+        border-radius: 8px;
         background: var(--white, #FFF);
-        box-shadow: 0px 0px 8.77546px 0px rgba(0, 0, 0, 0.01), 0px 0px 18.17037px 0px rgba(0, 0, 0, 0.02), 0px 0px 36.2375px 0px rgba(0, 0, 0, 0.03), 0px 0px 71.02963px 0px rgba(0, 0, 0, 0.03), 0px 0px 130.59953px 0px rgba(0, 0, 0, 0.04), 0px 0px 223px 0px rgba(0, 0, 0, 0.05);
+        gap: 40px;
+        padding: 40px;
         @include respond-to(tablet) {
             flex-direction: row;
             align-items: flex-start;
@@ -259,6 +279,9 @@
         border-radius: 50%;
         border: unset;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
         top: 12px;
         right: 12px;
@@ -269,9 +292,6 @@
         &-icon {
             width: 24px;
             height: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
     }
     &-card {
@@ -293,15 +313,38 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.28px;
+        }
+        &-price {
+            color: rgba(20, 20, 20, 0.50);
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.24px;
+            margin: 0;
+        }
+        &-price{
+            margin: 0;
         }
     }
     &-form {
         display: flex;
         flex-direction: column;
+        @include respond-to(tablet) {
+            width: 368px;
+        }
+        @include respond-to(desktop) {
+            width: 508px;
+        }
         &-group {
             display: flex;
             flex-direction: column;
             gap: 18px;
+            @include respond-to(desktop) {
+                    gap: 24px;
+            }
         }
         &-label,
         &-comment-label {
@@ -309,9 +352,6 @@
             flex-direction: column;
             gap: 12px;
             width: 100%;
-            @include respond-to(desktop) {
-                gap: 24px;
-            }
         }
         &-label-text,
         &-comment-label-text {
@@ -333,7 +373,6 @@
                 outline: none;
                 &::placeholder {
                     color: rgba(20, 20, 20, 0.50);
-                    
                     font-size: 14px;
                     line-height: 18px;
                     letter-spacing: -0.28px;
@@ -349,6 +388,7 @@
             gap: 8px;
             border-radius: 8px;
             border: 1px solid rgba(20, 20, 20, 0.50);
+            resize: none;
             outline: none;
         }
     }
@@ -362,11 +402,18 @@
         margin: 18px 0 10px;
         gap: 10px;
     }
+    &-terms {
+        color: rgba(20, 20, 20, 0.40);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.24px;
+    }
 }
 
 .holder {
     @include respond-to(tablet) {
-         margin-top: -240px;
+         margin-top: -24px;
     }
     @include respond-to(desktop) {
          margin-top: 0px;
