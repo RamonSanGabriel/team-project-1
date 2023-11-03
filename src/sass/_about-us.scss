@@ -37,11 +37,8 @@
         margin-top: 0;
       &.first {
         margin-bottom: 20px;
-<<<<<<< HEAD
       &.first {
         margin-bottom: 20px;}
-=======
->>>>>>> 8aea321224db10b26cc0815b9a370a275b851857
         @include respond-to(tablet) {
           width: 220px;
           margin-right: 20px;
@@ -63,7 +60,7 @@
           width: 380px;
         }
       }
-    }
+    // }
     &-gif {
       width: 100%;
       height: auto;
@@ -72,4 +69,4 @@
         margin-left: auto;
       }
     }
-  }
+  // }
