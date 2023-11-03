@@ -29,7 +29,6 @@
         margin-right: 110px;        
       }
     }
-  }
     &-description {
         font-weight: 300;
         line-height: calc(18/14);
@@ -37,8 +36,6 @@
         margin-top: 0;
       &.first {
         margin-bottom: 20px;
-      &.first {
-        margin-bottom: 20px;}
         @include respond-to(tablet) {
           width: 220px;
           margin-right: 20px;
@@ -49,7 +46,6 @@
           margin-right: 40px;
         }
       }
-    }
       &.second {
         margin-bottom: 40px;
         @include respond-to(tablet) {
@@ -60,7 +56,7 @@
           width: 380px;
         }
       }
-    // }
+    }
     &-gif {
       width: 100%;
       height: auto; 
@@ -69,4 +65,4 @@
         margin-left: auto;
       }
     }
-  // }
+  }
