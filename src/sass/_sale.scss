@@ -66,12 +66,34 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        width: 25%;
     }
 
     &-small:hover{
         cursor: pointer;
     }
 
+    &-large{
+        width: 75%;
+        position: relative;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+        &-large #expandedImg{
+              width: 235px;
+              height: 344px;
+
+        @include respond-to(tablet) {
+                width: 420px;
+                height: 600px;
+            }
+        
+        @include respond-to(desktop) {
+                width: 468px;
+                height: 560px;
+            }
+        }
+
+    
 }
 
 /*AccordionStyle*/
