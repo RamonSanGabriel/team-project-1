@@ -123,10 +123,16 @@ ol {
     transition: width var(--action) var(--cubic);
   }
 
-  &:hover:before, 
-  &:focus:before {
+  &.active:before, 
+  &:hover:before{
     width: 100%;
     right: auto;
     left: 0px;
+  }
+}
+
+.logo-link{
+  &::before{
+    display: none;
   }
 }

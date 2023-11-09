@@ -1,12 +1,29 @@
 
+/*Header*/
+// .header-section {
+//   background-color: var(--black); 
+
 .header-section {
   background-color: var(--black);
   padding-top: 29px;
+  padding-bottom: 29px;  
+  transition: all .10s;
 }
 @media screen and (min-width: 1158px) {
   .header-section {
     padding: 20px 0;
   }
+}
+.scrolled{
+  padding-top: 90px;
+}
+.scrolled #header {
+  z-index: 9999;
+  background-color: var(--black);
+  transition: all var(--action);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .container-header-section {
   display: flex;
@@ -89,6 +106,13 @@
   text-transform: uppercase;
 }
 
+
+// @media only screen and (min-width: 428px) and (max-width: 767px), only screen and (max-width: 427px) {
+
+//   .header-nav .header-navmenu {
+//     display: none;
+//   }
+// }
 /* Header Address */
 
 .address {
@@ -117,7 +141,17 @@
     cursor: pointer;
   }
 }
-
+// @media only screen and (min-width: 768px) and (max-width: 1157px) {
+//   // .container {
+//   //   max-width: 1157px : bad practice - dont't modify global css and used .container-header-section instead
+//   // }
+//   .header-nav .header-navmenu {
+//     display: none;
+//   }
+//   .address {
+//     display: none;
+//   }
+// }
 /* Mobile Nav Menu */
 
 .button-navmenu {
@@ -134,3 +168,4 @@
   height: 24px;
   fill: var(--white);
 }
+// }
